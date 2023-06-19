@@ -1,9 +1,9 @@
-const {createApp} = Vue
+const { createApp } = Vue
 
 createApp({
     data() {
         return {
-            email: '',
+            //email: '', //eliminazione dopo la correzione
             arrayEmail: []
         }
     },
@@ -11,10 +11,10 @@ createApp({
         this.generateTenEmails();
     },
     methods: {
-        generateTenEmails(){
-            for(let i=1; i<=10; i++){
+        generateTenEmails() {
+            for (let i = 1; i <= 10; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((result) => {
-                    this.arrayEmail.push(result.data.response) 
+                    this.arrayEmail.push(result.data.response)
                 });
             }
         }
