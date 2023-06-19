@@ -3,12 +3,19 @@ const {createApp} = Vue
 createApp({
     data() {
         return {
-            email: '',
+            email: '', //questo poteva non andare? 
             arrayEmail: []
         }
     },
     mounted() {
         this.generateTenEmails();
+        //modo alternativo 
+        //for (let i=1; i<=10, i++){
+            //axios.get('link?).then((response)) => 
+            //{
+                //this.arrayEmail.push(response.data.response)
+            //}
+        //}
     },
     methods: {
         generateTenEmails(){
